@@ -7,9 +7,6 @@ public class Figure1 {
                 System.out.print("* ");
             }
             System.out.println();
-
-
-
         }
 
 

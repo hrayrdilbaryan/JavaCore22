@@ -1,11 +1,11 @@
 package homework.stack;
 
-public class Stak {
+public class Stack {
 
     int[] stck = new int [10];
 
     public int tos;
-    public Stak(){
+    public Stack(){
         tos = -1;
     }
     public void push(int item){

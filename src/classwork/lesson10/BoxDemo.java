@@ -8,9 +8,11 @@ public class BoxDemo {
         double vol = myBox.volume();
         System.out.println(vol * 2);
 
-        Box myBox2 = new Box(4, 2, 9);
+        Box myBox2 = new Box(3, 5, 9);
 
         System.out.println(myBox2.volume());
+
+        System.out.println(myBox.equalTo(myBox2));
 
 
     }

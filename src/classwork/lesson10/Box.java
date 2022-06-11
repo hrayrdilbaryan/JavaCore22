@@ -17,6 +17,12 @@ public class Box {
         return depth * height * width;
     }
 
+    boolean equalTo(Box box){
+        return this.width == box.width
+                && this.height == box.height
+                && this.depth == box.depth;
+    }
+
 
 
 }
