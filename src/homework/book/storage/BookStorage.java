@@ -1,4 +1,6 @@
-package homework.books;
+package homework.book.storage;
+
+import homework.book.model.Books;
 
 public class BookStorage {
 
@@ -7,16 +9,18 @@ public class BookStorage {
 
     private int size = 0;
 
-    void add (Books value){
-        if (size == array.length){
+    public void add(Books value) {
+        if (size == array.length) {
             Books[] tmp = new Books[array.length + 10];
-            for (int i = 0; i <size ; i++) {
+            for (int i = 0; i < size; i++) {
                 tmp[i] = array[i];
             }
             array = tmp;
-        }array[size++] = value;
+        }
+        array[size++] = value;
     }
-    void printArray(){
+
+    public void printArray() {
         for (int i = 0; i < size; i++) {
             System.out.println(array[i]);
 
@@ -27,13 +31,13 @@ public class BookStorage {
     public void printBookByAuthor(String author) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (array[i].getAuthorName().equals(author)){
+            if (array[i].getAuthor().equals(author)) {
                 System.out.println(array[i]);
                 count++;
             }
 
         }
-        if (count == 0){
+        if (count == 0) {
             System.out.println("no book author");
         }
     }
@@ -41,12 +45,12 @@ public class BookStorage {
     public void printBookByGenre(String genre) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (array[i].getGenre().equals(genre)){
+            if (array[i].getGenre().equals(genre)) {
                 System.out.println(array[i]);
                 count++;
             }
         }
-        if (count==0){
+        if (count == 0) {
             System.out.println("no book genre");
         }
 
@@ -54,14 +58,14 @@ public class BookStorage {
 
     public void printByPriceReng(double price, double price1) {
         int count = 0;
-        for (int i = 0; i <size; i++) {
-            if (array[i].getPrice()< price1 && array[i].getPrice()> price){
+        for (int i = 0; i < size; i++) {
+            if (array[i].getPrice() < price1 && array[i].getPrice() > price) {
                 System.out.println(array[i]);
                 count++;
             }
 
         }
-        if (count == 0){
+        if (count == 0) {
             System.out.println("no price in rang");
         }
 
